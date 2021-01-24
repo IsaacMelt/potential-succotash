@@ -82,6 +82,7 @@ public class JDBC {
         JScrollPane pane = new JScrollPane(table);
         frame.add(pane, BorderLayout.CENTER);
         JPanel panel = new JPanel(new BorderLayout());
+        JPanel panel1 = new JPanel(new FlowLayout());
         JLabel label = new JLabel("Filter");
         panel.add(label, BorderLayout.WEST);
         final JTextField filterText = new JTextField("");
@@ -111,32 +112,32 @@ public class JDBC {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame add = new JFrame();
-                add.setSize(500, 800);
+                add.setSize(240, 530);
 
 
                 JButton enter = new JButton("Ввести");
-                enter.setBounds(180,550,100,30);
+                enter.setBounds(40,400,100,30);
                 JLabel label = new JLabel("Название программы");
                 JLabel label1 = new JLabel("Язык программирования");
                 JLabel label2 = new JLabel("Создатель");
                 JLabel label3 = new JLabel("Год выхода");
                 JLabel label4 = new JLabel("Стоимость подписки");
 
-                label.setBounds(190,30,200,30);
-                label1.setBounds(190,120,200,30);
-                label2.setBounds(190,210,200,30);
-                label3.setBounds(165,290,200,30);
-                label4.setBounds(210,370,200,30);
+                label.setBounds(40,30,200,30);
+                label1.setBounds(40,100,200,30);
+                label2.setBounds(40,170,200,30);
+                label3.setBounds(40,240,200,30);
+                label4.setBounds(40,310,200,30);
                 JTextField enter1 = new JTextField();
                 JTextField enter2 = new JTextField();
                 JTextField enter3 = new JTextField();
                 JTextField enter4 = new JTextField();
                 JTextField enter5 = new JTextField();
-                enter1.setBounds(180,90,100,30);
-                enter2.setBounds(180,170,100,30);
-                enter3.setBounds(180,250,100,30);
-                enter4.setBounds(180,330,100,30);
-                enter5.setBounds(180,410,100,30);
+                enter1.setBounds(40,60,100,30);
+                enter2.setBounds(40,130,100,30);
+                enter3.setBounds(40,200,100,30);
+                enter4.setBounds(40,270,100,30);
+                enter5.setBounds(40,340,100,30);
 
 
                 add.add(enter);
@@ -295,10 +296,11 @@ public class JDBC {
 
 
 
-        frame.add(button, BorderLayout.SOUTH);
-        frame.add(button1, BorderLayout.BEFORE_LINE_BEGINS);
-        frame.add(button2, BorderLayout.AFTER_LINE_ENDS);
-        frame.setSize(300, 250);
+        panel1.add(button);
+        panel1.add(button1);
+        panel1.add(button2);
+        frame.add(panel1, BorderLayout.SOUTH);
+        frame.setSize(800, 300);
         frame.setVisible(true);
 
         resultSet1.close();
